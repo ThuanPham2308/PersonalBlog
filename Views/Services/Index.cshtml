@@ -1,8 +1,8 @@
-﻿@{
+﻿@using PersonalBlog.Data;   
+@{
     ViewBag.Title = "Services";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <!-- Service Section -->
 <section class="service section active" id="services">
     <div class="container">
@@ -12,48 +12,18 @@
             </div>
         </div>
         <div class="row">
-            <!-- Service item -->
-            <div class="service-item padd-15">
-                <div class="service-item-inner">
-                    <div class="icon"><i class="fa fa-code"></i></div>
-                    <h4>.NET Web Development</h4>
-                    <p>Building robust and scalable web applications using ASP.NET MVC, C#, and SQL Server, from backend logic to frontend UI.</p>
+            @foreach (var service in (List<Service>)ViewBag.Services)
+            {
+                <!-- Service item -->
+                <div class="service-item padd-15">
+                    <div class="service-item-inner">
+                        <div class="icon"><i class="@service.Icon"></i></div>
+                        <h4>@service.ServiceName</h4>
+                        <p>@service.Description</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Service item End -->
-
-            <div class="service-item padd-15">
-                <div class="service-item-inner">
-                    <div class="icon"><i class="fa fa-laptop"></i></div>
-                    <h4>Frontend Design</h4>
-                    <p>Creating responsive, user-friendly interfaces with HTML, CSS, JavaScript, and Bootstrap to enhance user experience.</p>
-                </div>
-            </div>
-
-            <div class="service-item padd-15">
-                <div class="service-item-inner">
-                    <div class="icon"><i class="fa fa-database"></i></div>
-                    <h4>Database Design</h4>
-                    <p>Designing and optimizing SQL Server databases for performance, scalability, and security in web applications.</p>
-                </div>
-            </div>
-
-            <div class="service-item padd-15">
-                <div class="service-item-inner">
-                    <div class="icon"><i class="fa fa-cogs"></i></div>
-                    <h4>API Integration</h4>
-                    <p>Developing and integrating RESTful APIs to connect services and enhance system functionality.</p>
-                </div>
-            </div>
-            <!-- Service item -->
-            <div class="service-item padd-15">
-                <div class="service-item-inner">
-                    <div class="icon"><i class="fa fa-photo"></i></div>
-                    <h4>Photography</h4>
-                    <p>Capturing moments with creativity and precision to tell stories through images.</p>
-                </div>
-            </div>
-            <!-- Service item End -->
+                <!-- Service item End -->
+            }           
         </div>
     </div>
 </section>

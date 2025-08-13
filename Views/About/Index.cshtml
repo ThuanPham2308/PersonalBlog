@@ -1,8 +1,12 @@
-﻿@{
+﻿@using PersonalBlog.Data;
+@model PersonalBlog.Data.About;
+@{
     ViewBag.Title = "About Me";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var githubUsername = string.IsNullOrEmpty(Model.Github)
+        ? ""
+        : Model.Github.TrimEnd('/').Split('/').Last();
 }
-
 <!-- About Section -->
 <section class="about section active" id="about">
     <div class="container">
@@ -15,41 +19,41 @@
             <div class="about-content padd-15">
                 <div class="row">
                     <div class="about-text padd-15">
-                        <h3>I'm Pham Van Thuan and <span>.NET Developer</span></h3>
-                        <p>
-                            Hi! My name is Pham Van Thuan. I am currently a 4th-year student, pursuing my passion in .NET development.
-                            I am eager to learn and improve my skills through both academic projects and personal practice.
-                            My goal is to become a professional developer who can build efficient, user-friendly applications
-                            and contribute to meaningful projects in the future.
-                        </p>
+                        <h3>I'm @Model.FullName and <span>@Model.Job</span></h3>
+                        <p>@Model.Bio</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="personal-info padd-15">
                         <div class="row">
                             <div class="info-item padd-15">
-                                <p>Birthday : <span>23 August 2004</span></p>
+                                <p>
+                                    Birthday :
+                                    <span>
+                                        @(Model.Birthday.HasValue? Model.Birthday.Value.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("en-US")): "")
+                                    </span>
+                                </p>
                             </div>
                             <div class="info-item padd-15">
-                                <p>Age : <span>20</span></p>
+                                <p>Age : <span>@Model.Age</span></p>
                             </div>
                             <div class="info-item padd-15">
-                                <p>Github : <span><a href="https://github.com/ThuanPham2308" target="_blank" rel="noopener noreferrer">ThuanPham2308</a></span></p>
+                                <p>Github : <span><a href="@Model.Github" target="_blank" rel="noopener noreferrer">@githubUsername</a></span></p>
                             </div>
                             <div class="info-item padd-15">
-                                <p>Email : <span>thuan23082004@gmail.com</span></p>
+                                <p>Email : <span>@Model.Email</span></p>
                             </div>
                             <div class="info-item padd-15">
-                                <p>Degree : <span>Bachelor (In Progress)</span></p>
+                                <p>Degree : <span>@Model.Degree)</span></p>
                             </div>
                             <div class="info-item padd-15">
-                                <p>Phone : <span>+84 976 149 620</span></p>
+                                <p>Phone : <span>@Model.Phone</span></p>
                             </div>
                             <div class="info-item padd-15">
-                                <p>City : <span>Ho Chi Minh City</span></p>
+                                <p>City : <span>@Model.City</span></p>
                             </div>
                             <div class="info-item padd-15">
-                                <p>Freelance : <span>Available</span></p>
+                                <p>Freelance : <span>@Model.Freelance</span></p>
                             </div>
                         </div>
 
@@ -62,38 +66,16 @@
                     </div>
                     <div class="skills padd-15">
                         <div class="row">
-                            <div class="skill-item padd-15">
-                                <h5>.NET (C#)</h5>
-                                <div class="progress">
-                                    <div class="progress-in" style="width: 75%;"></div>
-                                    <div class="skill-porcent">75%</div>
+                            @foreach (var skill in (List<Skill>)ViewBag.Skills)
+                            {
+                                <div class="skill-item padd-15">
+                                    <h5>@skill.SkillName</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: @skill.Proficiency%;"></div>
+                                        <div class="skill-porcent">@skill.Proficiency%</div>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="skill-item padd-15">
-                                <h5>ASP.NET MVC / Web API</h5>
-                                <div class="progress">
-                                    <div class="progress-in" style="width: 70%;"></div>
-                                    <div class="skill-porcent">70%</div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item padd-15">
-                                <h5>SQL Server</h5>
-                                <div class="progress">
-                                    <div class="progress-in" style="width: 65%;"></div>
-                                    <div class="skill-porcent">65%</div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item padd-15">
-                                <h5>HTML/CSS</h5>
-                                <div class="progress">
-                                    <div class="progress-in" style="width: 80%;"></div>
-                                    <div class="skill-porcent">80%</div>
-                                </div>
-                            </div>
-
+                            }
                         </div>
                     </div>
                 </div>
@@ -103,29 +85,17 @@
                         <div class="row">
                             <div class="timeline-box padd-15">
                                 <div class="timeline shadow-dark">
-                                    <!-- timeline Item -->
-                                    <div class="timeline-item">
-                                        <div class="circle-dot"></div>
-                                        <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2021 - Present</h6>
-                                        <h4 class="timeline-title">Bachelor in Information Technology</h4>
-                                        <p class="timeline-text">
-                                            Fourth-year student majoring in Information Technology at Ho Chi Minh City University of Transport (UTC2),
-                                            aiming to become a professional .NET developer.
-                                        </p>
-                                    </div>
-                                    <!-- timeline Item End -->
-                                    <!-- timeline Item -->
-                                    <div class="timeline-item">
-                                        <div class="circle-dot"></div>
-                                        <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2018 - 2021</h6>
-                                        <h4 class="timeline-title">High School Diploma</h4>
-                                        <p class="timeline-text">
-                                            Graduated from high school with strengths in Mathematics and Computer Science, providing a solid foundation for a programming career.
-                                            Achieved multiple awards in Violympic Math competitions at the commune and provincial levels,
-                                            as well as provincial-level Excellent Student in Mathematics.
-                                        </p>
-                                    </div>
-                                    <!-- timeline Item End -->
+                                    @foreach (var edu in (List<Education>)ViewBag.Educations)
+                                    {
+                                        <!-- timeline Item -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h6 class="timeline-date"><i class="fa fa-calendar"></i> @edu.StartYear - @edu.EndYear</h6>
+                                            <h4 class="timeline-title">@edu.Title</h4>
+                                            <p class="timeline-text">@edu.Description</p>
+                                        </div>
+                                        <!-- timeline Item End -->
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -135,28 +105,17 @@
                         <div class="row">
                             <div class="timeline-box padd-15">
                                 <div class="timeline shadow-dark">
-                                    <!-- timeline Item -->
-                                    <div class="timeline-item">
-                                        <div class="circle-dot"></div>
-                                        <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2021 - Present</h6>
-                                        <h4 class="timeline-title">Personal Projects</h4>
-                                        <p class="timeline-text">
-                                            Developed small web applications using .NET, HTML, CSS, and JavaScript,
-                                            practicing both frontend and backend development skills.
-                                        </p>
-                                    </div>
-                                    <!-- timeline Item End -->
-                                    <!-- timeline Item -->
-                                    <div class="timeline-item">
-                                        <div class="circle-dot"></div>
-                                        <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2024 - Present</h6>
-                                        <h4 class="timeline-title">.NET Developer Intern</h4>
-                                        <p class="timeline-text">
-                                            Internship in developing web applications with ASP.NET MVC, C#, and SQL Server;
-                                            improving teamwork skills and applying software development processes.
-                                        </p>
-                                    </div>
-                                    <!-- timeline Item End -->
+                                    @foreach (var exp in (List<Experience>)ViewBag.Experiences)
+                                    {
+                                        <!-- timeline Item -->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h6 class="timeline-date"><i class="fa fa-calendar"></i> @exp.StartYear - @exp.EndYear</h6>
+                                            <h4 class="timeline-title">@exp.Title</h4>
+                                            <p class="timeline-text">@exp.Description</p>
+                                        </div>
+                                        <!-- timeline Item End -->
+                                    }
                                 </div>
                             </div>
                         </div>

@@ -3,7 +3,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- Portfolio Section -->
 <section class="portfolio section active" id="portfolio">
     <div class="container">
         <div class="row">
@@ -11,106 +10,41 @@
                 <h2>Portfolio</h2>
             </div>
         </div>
+
+        <!-- Portfolio Filters -->
         <div class="row">
             <div class="portfolio-filter padd-15">
-                <button type="button" class="active" data-filter="all">All</button>
-                <button type="button" data-filter="web-design">Web Design</button>
-                <button type="button" data-filter="photography">Photography</button>
-                <button type="button" data-filter="wordpress">Wordpress</button>
+                <button type="button" class="@(ViewBag.SelectedCategory == "all" ? "active" : "")"
+                        onclick="location.href='@Url.Action("Index", new { category = "all" })'">
+                    All
+                </button>
+
+                @foreach (var cat in ViewBag.Categories)
+                {
+                    <button type="button" class="@(ViewBag.SelectedCategory == cat ? "active" : "")"
+                            onclick="location.href='@Url.Action("Index", new { category = cat })'">
+                        @cat
+                    </button>
+                }
             </div>
         </div>
+
+        <!-- Portfolio Items -->
         <div class="row">
-            <!-- Portfolio Item -->
-            <div class="portfolio-item padd-15" data-category="web-design">
-                <div class="portfolio-item-inner shadow-dark">
-                    <div class="portfolio-img">
-                        <img src="~/images/portfolio/1.jpg" alt="Web Design">
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>Web Design</h4>
-                        <div class="icon">
-                            <i class="fa fa-search"></i>
+            @foreach (var item in Model)
+            {
+                <div class="portfolio-item padd-15">
+                    <div class="portfolio-item-inner shadow-dark">
+                        <div class="portfolio-img">
+                            <img src="~/@item.Image" alt="@item.Title" />
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>@item.Title</h4>
+                            <p>@item.Description</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item -->
-            <div class="portfolio-item padd-15" data-category="photography">
-                <div class="portfolio-item-inner shadow-dark">
-                    <div class="portfolio-img">
-                        <img src="~/images/portfolio/2.jpg" alt="Photography">
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>Photography</h4>
-                        <div class="icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item -->
-            <div class="portfolio-item padd-15" data-category="wordpress">
-                <div class="portfolio-item-inner shadow-dark">
-                    <div class="portfolio-img">
-                        <img src="~/images/portfolio/3.jpg" alt="Wordpress">
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>Wordpress</h4>
-                        <div class="icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item -->
-            <div class="portfolio-item padd-15" data-category="web-design">
-                <div class="portfolio-item-inner shadow-dark">
-                    <div class="portfolio-img">
-                        <img src="~/images/portfolio/4.jpg" alt="portfolio">
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>Web Design</h4>
-                        <div class="icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item -->
-            <div class="portfolio-item padd-15" data-category="wordpress">
-                <div class="portfolio-item-inner shadow-dark">
-                    <div class="portfolio-img">
-                        <img src="~/images/portfolio/5.jpg" alt="Wordpress">
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>Wordpress</h4>
-                        <div class="icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Portfolio Item End -->
-            <!-- Portfolio Item -->
-            <div class="portfolio-item padd-15" data-category="photography">
-                <div class="portfolio-item-inner shadow-dark">
-                    <div class="portfolio-img">
-                        <img src="~/images/portfolio/6.jpg" alt="Wordpress">
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>Photography</h4>
-                        <div class="icon">
-                            <i class="fa fa-search"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Portfolio Item End -->
+            }
         </div>
     </div>
 </section>
-<!-- Portfolio Section End -->

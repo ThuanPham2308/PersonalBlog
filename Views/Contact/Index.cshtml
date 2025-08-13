@@ -1,4 +1,9 @@
-﻿<!-- Contact Section -->
+﻿@model PersonalBlog.Data.About
+@{
+    ViewBag.Title = "Contact Me";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Contact Section -->
 <section class="contact section" id="contact">
     <div class="container">
         <div class="row">
@@ -13,15 +18,15 @@
                     <i class="fa fa-phone"></i>
                 </div>
                 <h4>Phone</h4>
-                <p>+84 976 149 620</p>
+                <p>@Model.Phone</p>
             </div>
             <!-- Contact Info Item -->
             <div class="contact-info-item padd-15">
                 <div class="icon">
                     <i class="fa fa-map-marker"></i>
                 </div>
-                <h4>Address</h4>
-                <p>236A, Suoi Chon Street, Bao Vinh, Dong Nai</p>
+                <h4>City</h4>
+                <p>@Model.City</p>
             </div>
             <!-- Contact Info Item -->
             <div class="contact-info-item padd-15">
@@ -29,7 +34,7 @@
                     <i class="fa fa-envelope"></i>
                 </div>
                 <h4>Email</h4>
-                <p>thuan23082004@gmail.com</p>
+                <p>@Model.Email</p>
             </div>
         </div>
 

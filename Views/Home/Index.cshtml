@@ -1,4 +1,5 @@
-﻿@{
+﻿@model PersonalBlog.Data.About
+@{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -7,14 +8,14 @@
 <section class="home section active" id="home">
     <div class="container">
         <div class="intro">
-            <img src="~/images/me.jfif" alt="profile" class="shadow-dark">
-            <h1>Phạm Văn Thuận</h1>
+            <img src="@Model.ProfileImage" alt="profile" class="shadow-dark">
+            <h1>@Model.FullName</h1>
             <span class="iTyped"></span>
             <div class="social-links">
-                <a href="https://github.com/ThuanPham2308" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.facebook.com/thuanpham.2308" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.instagram.com/thuanpham.2308/" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/thu%E1%BA%ADn-ph%E1%BA%A1m-a8a17737a/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="@Model.Github" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="@Model.Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="@Model.Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="@Model.Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
     </div>
