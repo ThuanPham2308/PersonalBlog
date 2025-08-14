@@ -6,7 +6,13 @@ wwwroot\css\skins\yellow.css
 wwwroot\css\style.css
 wwwroot\css\styleSwitcher.css
 wwwroot\favicon.ico
-wwwroot\images\me.jfif
+wwwroot\images\me.jpg
+wwwroot\images\portfolio\mens_fashion.jpg
+wwwroot\images\portfolio\moto_shop.jpg
+wwwroot\images\portfolio\personal_blog.jpg
+wwwroot\images\portfolio\project_mgmt.jpg
+wwwroot\images\portfolio\vascara.jpg
+wwwroot\images\profile.jpg
 wwwroot\js\ityped.min.js
 wwwroot\js\script.js
 wwwroot\js\styleSwitcher.js

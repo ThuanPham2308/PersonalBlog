@@ -35,13 +35,15 @@
             {
                 <div class="portfolio-item padd-15">
                     <div class="portfolio-item-inner shadow-dark">
-                        <div class="portfolio-img">
-                            <img src="~/@item.Image" alt="@item.Title" />
-                        </div>
-                        <div class="portfolio-info">
-                            <h4>@item.Title</h4>
-                            <p>@item.Description</p>
-                        </div>
+                        <a href="@item.Link" target="_blank">
+                            <div class="portfolio-img">
+                                    <img src="~/@item.Image" alt="@item.Title" />
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>@item.Title</h4>
+                                <h5 style="color: white;">@item.Description</h5>
+                            </div>
+                        </a>
                     </div>
                 </div>
             }
