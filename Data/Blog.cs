@@ -13,7 +13,7 @@ public partial class Blog
 
     public string? Content { get; set; }
 
-    public string? Link { get; set; }
+    public string? Summary { get; set; }
 
     public DateOnly? PublishDate { get; set; }
 }

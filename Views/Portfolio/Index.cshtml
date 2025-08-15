@@ -31,17 +31,17 @@
 
         <!-- Portfolio Items -->
         <div class="row">
-            @foreach (var item in Model)
+            @foreach (var port in Model)
             {
                 <div class="portfolio-item padd-15">
                     <div class="portfolio-item-inner shadow-dark">
-                        <a href="@item.Link" target="_blank">
+                        <a href="@port.Link" target="_blank">
                             <div class="portfolio-img">
-                                    <img src="~/@item.Image" alt="@item.Title" />
+                                    <img src="~/@port.Image" alt="@port.Title" />
                             </div>
                             <div class="portfolio-info">
-                                <h4>@item.Title</h4>
-                                <h5 style="color: white;">@item.Description</h5>
+                                <h4>@port.Title</h4>
+                                <h5 style="color: white;">@port.Description</h5>
                             </div>
                         </a>
                     </div>

@@ -31,7 +31,7 @@ public partial class PersonalBlogContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=THUAN-PHAM\\SQL2022;Initial Catalog=PersonalBlog;User ID=sa;Password=thuan23082004;Trust Server Certificate=True");
+        => optionsBuilder.UseSqlServer("Data Source=THUAN-PHAM\\SQL2022;Initial Catalog=PersonalBlog;Persist Security Info=True;User ID=sa;Password=thuan23082004;Encrypt=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -72,13 +72,11 @@ public partial class PersonalBlogContext : DbContext
 
         modelBuilder.Entity<Blog>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Blog__3214EC076DAB3713");
+            entity.HasKey(e => e.Id).HasName("PK__Blog__3214EC07CB2995CA");
 
             entity.ToTable("Blog");
 
-            entity.Property(e => e.Link)
-                .HasMaxLength(255)
-                .IsUnicode(false);
+            entity.Property(e => e.Summary).HasMaxLength(500);
             entity.Property(e => e.Tag).HasMaxLength(100);
             entity.Property(e => e.Title).HasMaxLength(255);
         });
