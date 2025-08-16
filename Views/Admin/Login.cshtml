@@ -1,0 +1,26 @@
+﻿<link rel="stylesheet" href="~/css/styleAdmin.css" type="text/css">
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
+                <h1 class="opacity">LOGIN</h1>
+                <form asp-action="Login" asp-controller="Admin" method="post">
+                    <input type="text" name="username" placeholder="USERNAME" />
+                    <input type="password" name="password" placeholder="PASSWORD" />
+                    <button type="submit" class="opacity">SUBMIT</button>
+                </form>
+                <div class="register-forget opacity">
+                    <a href="">FORGOT PASSWORD</a>
+                </div>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+</body>

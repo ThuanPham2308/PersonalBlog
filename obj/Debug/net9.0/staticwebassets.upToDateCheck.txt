@@ -4,6 +4,7 @@ wwwroot\css\skins\orange.css
 wwwroot\css\skins\pink.css
 wwwroot\css\skins\yellow.css
 wwwroot\css\style.css
+wwwroot\css\styleAdmin.css
 wwwroot\css\styleSwitcher.css
 wwwroot\favicon.ico
 wwwroot\images\blog\analyst_request.jpg
@@ -35,6 +36,7 @@ wwwroot\images\portfolio\vascara.jpg
 wwwroot\images\profile.jpg
 wwwroot\js\ityped.min.js
 wwwroot\js\script.js
+wwwroot\js\scriptAdmin.js
 wwwroot\js\styleSwitcher.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -178,3 +180,5 @@ C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\css\styleSwitcher.css
 C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\js\ityped.min.js
 C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\js\script.js
 C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\js\styleSwitcher.js
+C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\css\styleAdmin.css
+C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\js\scriptAdmin.js
