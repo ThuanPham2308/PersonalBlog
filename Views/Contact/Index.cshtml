@@ -1,9 +1,4 @@
-﻿@model PersonalBlog.Data.About
-@{
-    ViewBag.Title = "Contact Me";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<!-- Contact Section -->
+﻿<!-- Contact Section -->
 <section class="contact section" id="contact">
     <div class="container">
         <div class="row">
@@ -39,41 +34,40 @@
         </div>
 
         <!-- Contact Form -->
-        <div class="row">
-            <form action="#" class="contact-form padd-15">
-                <div class="row">
-                    <div class="form-item col-6 padd-15">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Name*" required>
-                        </div>
-                    </div>
-                    <div class="form-item col-6 padd-15">
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Email*" required>
-                        </div>
+        <form asp-controller="Contact" asp-action="Send" method="post" class="contact-form padd-15">
+            <div class="row">
+                <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                        <input type="text" name="Name" class="form-control" placeholder="Name*" required>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="form-item col-12 padd-15">
-                        <div class="form-group">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject*" required>
-                        </div>
+                <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                        <input type="email" name="Email" class="form-control" placeholder="Email*" required>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="form-item col-12 padd-15">
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Your Message..." rows="5" required></textarea>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                        <input type="text" name="Subject" class="form-control" placeholder="Subject*" required>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 padd-15">
-                        <button type="submit" class="btn">Send Message</button>
+            </div>
+            <div class="row">
+                <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                        <textarea class="form-control" name="Message" placeholder="Your Message..." rows="5" required></textarea>
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+            <div class="row">
+                <div class="col-12 padd-15">
+                    <button type="submit" class="btn">Send Message</button>
+                </div>
+            </div>
+        </form>
+
         <!-- Contact Form End -->
     </div>
 </section>

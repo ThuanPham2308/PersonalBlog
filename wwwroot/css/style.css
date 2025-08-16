@@ -12,9 +12,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -1165,26 +1167,27 @@ select {
                 text-decoration: none;
                 font-weight: 600;
             }
-.blog .blog-content {
+
+.blog-detail .blog-content {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
 }
 
-    .blog .blog-content .blog-text {
+    .blog-detail .blog-content .blog-text {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
     }
 
-        .blog .blog-content .blog-text h3 {
+        .blog-detail .blog-content .blog-text h1, h2, h3 {
             font-size: 24px;
             margin-bottom: 15px;
             font-weight: 700;
             color: #302e4d;
         }
 
-        .blog .blog-content .blog-text p {
+        .blog-detail .blog-content .blog-text p {
             font-size: 16px;
             line-height: 25px;
             color: #020203;

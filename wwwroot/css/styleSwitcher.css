@@ -79,6 +79,7 @@ body.dark .section {
 body.dark .aside,
 body.dark .contact .contact-form .form-item .form-control,
 body.dark .blog .blog-item-inner .blog-info,
+body.dark .blog-detail .blog-content .blog-item-inner .blog-info,
 body.dark .service .service-item .service-item-inner,
 body.dark .about .about-content .timeline {
     background-color: #222222;
@@ -93,8 +94,13 @@ body.dark .about .about-content .timeline {
     body.dark .about .about-content .skills .skill-item h5,
     body.dark .about .about-content .personal-info .info-item p,
     body.dark .about .about-content .about-text h3,
+    body.dark .blog-detail .blog-content .blog-text h1,
+    body.dark .blog-detail .blog-content .blog-text h2,
+    body.dark .blog-detail .blog-content .blog-text h3,
+    body.dark .blog-detail .blog-content .blog-text h5,
     body.dark .home .intro h1,
     body.dark .about .about-content h3.title,
+    body.dark .blog-detail .blog-content h3.title,
     body.dark .section-title h2,
     body.dark .aside .logo a {
         color: #ffffff;
@@ -110,6 +116,7 @@ body.dark .about .about-content .timeline {
         body.dark .about .about-content .timeline .timeline-date,
         body.dark .about .about-content .skills .skill-item .skill-porcent,
         body.dark .about .about-content .personal-info .info-item p span,
+        body.dark .blog-detail .blog-content .blog-text p,
         body.dark .about .about-content .about-text p {
             color: #e9e9e9;
         }
