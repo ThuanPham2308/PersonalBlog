@@ -36,12 +36,37 @@
                 </div>
                 <!-- Nav -->
                 <ul class="nav">
-                    <li>
-                        <a href="@Url.Action("Index", "Admin")"
-                           class="@(ViewContext.RouteData.Values["controller"].ToString() == "Admin" ? "active" : "")">
-                            <i class="fa fa-home"></i> Home
-                        </a>
-                    </li>
+                    <ul class="nav">
+                        <li>
+                            <a href="@Url.Action("Index", "Admin")"
+                               class="@(ViewContext.RouteData.Values["controller"].ToString() == "Admin" ? "active" : "")">
+                                <i class="fa fa-home"></i> Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="@Url.Action("About", "Admin")"
+                               class="@(ViewContext.RouteData.Values["controller"].ToString() == "Admin" ? "active" : "")">
+                                <i class="fa fa-user"></i> About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="@Url.Action("Portfolio", "Admin")"
+                               class="@(ViewContext.RouteData.Values["controller"].ToString() == "Admin" ? "active" : "")">
+                                <i class="fa fa-briefcase"></i> Portfolio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="@Url.Action("Blog", "Admin")"
+                               class="@(ViewContext.RouteData.Values["controller"].ToString() == "Admin" ? "active" : "")">
+                                <i class="fa fa-pencil"></i> Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
                 </ul>
 
                 <!-- Copyright -->

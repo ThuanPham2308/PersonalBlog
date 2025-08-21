@@ -1,0 +1,228 @@
+﻿@using PersonalBlog.Data;
+@model PersonalBlog.Data.About;
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- Admin About Management Section -->
+<section class="admin-about section active" id="admin-about">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h2>Manage About Information</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="admin-content padd-15">
+
+                <!-- Personal Information Form -->
+                <div class="admin-form-section">
+                    <h3>Personal Information</h3>
+                    <form method="post" action="@Url.Action("UpdateAbout", "Admin")">
+                        <input type="hidden" name="Id" value="@Model.Id" />
+
+                        <div class="row">
+                            <div class="form-group padd-15">
+                                <label for="FullName">Full Name:</label>
+                                <input type="text" id="FullName" name="FullName" value="@Model.FullName" class="form-control" />
+                            </div>
+                            <div class="form-group padd-15">
+                                <label for="Job">Job Title:</label>
+                                <input type="text" id="Job" name="Job" value="@Model.Job" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group padd-15 full-width">
+                                <label for="Bio">Biography:</label>
+                                <textarea id="Bio" name="Bio" class="form-control" rows="4">@Model.Bio</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group padd-15">
+                                <label for="Birthday">Birthday:</label>
+                                <input type="date" id="Birthday" name="Birthday" value="@(Model.Birthday?.ToString("yyyy-MM-dd"))" class="form-control" />
+                            </div>
+                            <div class="form-group padd-15">
+                                <label for="Age">Age:</label>
+                                <input type="number" id="Age" name="Age" value="@Model.Age" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group padd-15">
+                                <label for="Github">Github URL:</label>
+                                <input type="url" id="Github" name="Github" value="@Model.Github" class="form-control" />
+                            </div>
+                            <div class="form-group padd-15">
+                                <label for="Email">Email:</label>
+                                <input type="email" id="Email" name="Email" value="@Model.Email" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group padd-15">
+                                <label for="Degree">Degree:</label>
+                                <input type="text" id="Degree" name="Degree" value="@Model.Degree" class="form-control" />
+                            </div>
+                            <div class="form-group padd-15">
+                                <label for="Phone">Phone:</label>
+                                <input type="tel" id="Phone" name="Phone" value="@Model.Phone" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group padd-15">
+                                <label for="City">City:</label>
+                                <input type="text" id="City" name="City" value="@Model.City" class="form-control" />
+                            </div>
+                            <div class="form-group padd-15">
+                                <label for="Freelance">Freelance:</label>
+                                <select id="Freelance" name="Freelance" class="form-control">
+                                    <option value="Available" selected="@(Model.Freelance == "Available")">Available</option>
+                                    <option value="Not Available" selected="@(Model.Freelance == "Not Available")">Not Available</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group padd-15">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Skills Management -->
+                <div class="admin-form-section">
+                    <div class="section-header">
+                        <h3>Skills Management</h3>
+                        <a href="@Url.Action("CreateSkill","Admin")" class="btn btn-success btn-sm">
+                            <i class="fa fa-plus"></i> Add New Skill
+                        </a>
+                    </div>
+
+                    <div id="skillsList" class="skills-admin-list">
+                        @foreach (var skill in ViewBag.Skills)
+                        {
+                            <form method="post" action="@Url.Action("UpdateSkill","Admin")" class="skill-admin-item padd-15">
+                                <input type="hidden" name="Id" value="@skill.Id" />
+                                <div class="skill-controls">
+                                    <button type="submit" class="btn-icon btn-edit">
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                    <a href="@Url.Action("DeleteSkill","Admin", new { id = skill.Id })" class="btn-icon btn-delete">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                                <div class="skill-info">
+                                    <input type="text" name="SkillName" class="skill-name" value="@skill.SkillName" />
+                                    <div class="progress-container">
+                                        <input type="range" name="Proficiency" min="0" max="100" value="@skill.Proficiency" />
+                                        <span class="proficiency-value">@skill.Proficiency%</span>
+                                    </div>
+                                </div>
+                            </form>
+                        }
+                    </div>
+                </div>
+
+                <!-- Education Management -->
+                <div class="admin-form-section">
+                    <div class="section-header">
+                        <h3>Education Management</h3>
+                        <a href="@Url.Action("CreateEducation","Admin")" class="btn btn-success btn-sm">
+                            <i class="fa fa-plus"></i> Add New Education
+                        </a>
+                    </div>
+
+                    <div id="educationList" class="timeline-admin-list">
+                        @foreach (var edu in (List<Education>)ViewBag.Educations)
+                        {
+                            <form method="post" action="@Url.Action("UpdateEducation","Admin")" class="timeline-admin-item padd-15">
+                                <input type="hidden" name="Id" value="@edu.Id" />
+                                <div class="timeline-controls">
+                                    <button type="submit" class="btn-icon btn-edit">
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                    <a href="@Url.Action("DeleteEducation","Admin", new { id = edu.Id })" class="btn-icon btn-delete">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                                <div class="timeline-form">
+                                    <div class="row">
+                                        <div class="form-group padd-15">
+                                            <label>Start Year:</label>
+                                            <input type="number" name="StartYear" value="@edu.StartYear" />
+                                        </div>
+                                        <div class="form-group padd-15">
+                                            <label>End Year:</label>
+                                            <input type="number" name="EndYear" value="@edu.EndYear" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group padd-15">
+                                        <label>Title:</label>
+                                        <input type="text" name="Title" value="@edu.Title" />
+                                    </div>
+                                    <div class="form-group padd-15">
+                                        <label>Description:</label>
+                                        <textarea name="Description" rows="3">@edu.Description</textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        }
+                    </div>
+                </div>
+
+                <!-- Experience Management -->
+                <div class="admin-form-section">
+                    <div class="section-header">
+                        <h3>Experience Management</h3>
+                        <a href="@Url.Action("CreateExperience","Admin")" class="btn btn-success btn-sm">
+                            <i class="fa fa-plus"></i> Add New Experience
+                        </a>
+                    </div>
+
+                    <div id="experienceList" class="timeline-admin-list">
+                        @foreach (var exp in (List<Experience>)ViewBag.Experiences)
+                        {
+                            <form method="post" action="@Url.Action("UpdateExperience","Admin")" class="timeline-admin-item padd-15">
+                                <input type="hidden" name="Id" value="@exp.Id" />
+                                <div class="timeline-controls">
+                                    <button type="submit" class="btn-icon btn-edit">
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                    <a href="@Url.Action("DeleteExperience","Admin", new { id = exp.Id })" class="btn-icon btn-delete">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                                <div class="timeline-form">
+                                    <div class="row">
+                                        <div class="form-group padd-15">
+                                            <label>Start Year:</label>
+                                            <input type="number" name="StartYear" value="@exp.StartYear" />
+                                        </div>
+                                        <div class="form-group padd-15">
+                                            <label>End Year:</label>
+                                            <input type="number" name="EndYear" value="@exp.EndYear" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group padd-15">
+                                        <label>Title:</label>
+                                        <input type="text" name="Title" value="@exp.Title" />
+                                    </div>
+                                    <div class="form-group padd-15">
+                                        <label>Description:</label>
+                                        <textarea name="Description" rows="3">@exp.Description</textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

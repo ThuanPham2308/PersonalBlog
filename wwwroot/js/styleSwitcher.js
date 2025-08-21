@@ -9,11 +9,11 @@ function setActiveStyle(color) {
             links[i].setAttribute('disabled', true);
         }
     }
-    // Lưu màu vào localStorage
+    // Save color to localStorage
     localStorage.setItem('selectedColor', color);
 }
 
-// Áp dụng màu đã lưu khi load trang
+// Apply saved color when page loads
 window.addEventListener('DOMContentLoaded', () => {
     const savedColor = localStorage.getItem('selectedColor');
     if (savedColor) {
@@ -28,13 +28,13 @@ window.addEventListener('DOMContentLoaded', () => {
             document.body.className = '';
         }
 
-        // Cập nhật radio body skin đã chọn
+        // Update the selected body skin radio
         const radio = document.querySelector(`input.body-skin[value="${savedSkin}"]`);
         if (radio) radio.checked = true;
     }
 });
 
-// body skin
+// Body skin
 const bodySkin = document.querySelectorAll('.body-skin'),
     totalBodySkin = bodySkin.length;
 

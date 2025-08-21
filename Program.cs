@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PersonalBlog.Data;
+using PersonalBlog.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,9 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<AuthService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

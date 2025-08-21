@@ -1,0 +1,10 @@
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\PersonalBlog.csproj.AssemblyReference.cache
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\PersonalBlog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\PersonalBlog.AssemblyInfoInputs.cache
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\PersonalBlog.AssemblyInfo.cs
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\PersonalBlog.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\PersonalBlog.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\PersonalBlog.RazorAssemblyInfo.cache
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\PersonalBlog.RazorAssemblyInfo.cs
+C:\Users\User\Documents\API\Project\PersonalBlog\obj\Debug\net8.0\PersonalBlog.sourcelink.json

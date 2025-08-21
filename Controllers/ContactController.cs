@@ -25,18 +25,16 @@ namespace PersonalBlog.Controllers
             {
                 using (var smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtp.Credentials = new System.Net.NetworkCredential("your mail", "your password app");
+                    smtp.Credentials = new System.Net.NetworkCredential("thuan23082004@gmail.com", "**** **** ****");
                     smtp.EnableSsl = true;
                     var mail = new MailMessage();
                     mail.From = new MailAddress(model.Email);
-                    mail.To.Add("your mail");
+                    mail.To.Add("thuan23082004@gmail.com");
                     mail.Subject = model.Subject;
                     mail.Body = $"Name: {model.Name}\nEmail: {model.Email}\nMessage: {model.Message}";
                     smtp.Send(mail);
                 }
-
                 ViewBag.Message = "Gửi thành công!";
-                return RedirectToAction("Index", "Contact");
             }
             return RedirectToAction("Index", "Contact");
         }

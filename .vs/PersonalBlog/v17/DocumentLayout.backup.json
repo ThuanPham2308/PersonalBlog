@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\views\\admin\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:views\\admin\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-16T15:24:05.748Z",
+              "DocumentIndex": 1,
+              "Title": "AboutController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Controllers\\AboutController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AboutController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Controllers\\AboutController.cs",
+              "RelativeToolTip": "Controllers\\AboutController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T14:19:27.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\About.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\About.cshtml",
+              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\About.cshtml",
+              "RelativeToolTip": "Views\\Admin\\About.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAkwFMAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-16T15:11:19.619Z",
+              "WhenOpened": "2025-08-21T14:02:59.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Login.cshtml",
-              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\Login.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-16T15:10:58.208Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T10:48:57.299Z",
+              "WhenOpened": "2025-08-21T14:00:57.95Z",
               "EditorCaption": ""
             }
           ]

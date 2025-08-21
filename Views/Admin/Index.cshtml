@@ -2,3 +2,20 @@
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+<!-- Home Section -->
+<section class="home section active" id="home">
+    <div class="container">
+        <div class="intro">
+            <img src="@Model.ProfileImage" alt="profile" class="shadow-dark">
+            <h1>@Model.FullName</h1>
+            <span class="iTyped"></span>
+            <div class="social-links">
+                <a href="@Model.Github" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="@Model.Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="@Model.Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="@Model.Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Home Section End -->

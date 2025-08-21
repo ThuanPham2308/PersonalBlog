@@ -178,7 +178,7 @@ C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\css\skins\yellow.css
 C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\css\style.css
 C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\css\styleSwitcher.css
 C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\js\ityped.min.js
-C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\js\script.js
 C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\js\styleSwitcher.js
+C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\js\script.js
 C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\css\styleAdmin.css
 C:\Users\User\Documents\API\Project\PersonalBlog\wwwroot\js\scriptAdmin.js
