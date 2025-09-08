@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PersonalBlog.Data;
-using PersonalBlog.Services; 
+using PersonalBlog.Services;
+using Microsoft.Extensions.Configuration;
 
 namespace PersonalBlog.Controllers
 {
@@ -8,11 +9,13 @@ namespace PersonalBlog.Controllers
     {
         private readonly PersonalBlogContext _context;
         private readonly AuthService _authService;
+        private readonly IConfiguration _configuration;
 
-        public AdminController(PersonalBlogContext context, AuthService authService)
+        public AdminController(PersonalBlogContext context, AuthService authService, IConfiguration configuration)
         {
             _context = context;
             _authService = authService;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
@@ -321,7 +324,10 @@ namespace PersonalBlog.Controllers
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
-            if (username == "admin" && password == "123")
+            var adminUser = _configuration["AdminCredentials:Username"];
+            var adminPass = _configuration["AdminCredentials:Password"];
+
+            if (username == adminUser && password == adminPass)
             {
                 HttpContext.Session.SetString("IsAdmin", "true");
                 return RedirectToAction("Index", "Admin");
@@ -330,7 +336,6 @@ namespace PersonalBlog.Controllers
             ViewBag.Error = "Sai tài khoản hoặc mật khẩu!";
             return View();
         }
-
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("IsAdmin");
