@@ -87,20 +87,26 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="form-group padd-15">
+                                <label for="Facebook">Facebook URL:</label>
+                                <input type="url" id="Facebook" name="Facebook" value="@Model.Facebook" class="form-control" />
+                            </div>
+                            <div class="form-group padd-15">
+                                <label for="Instagram">Instagram URL:</label>
+                                <input type="url" id="Instagram" name="Instagram" value="@Model.Instagram" class="form-control" />
+                            </div>
+                        </div>
 
                         <div class="form-group padd-15">
                             <button type="submit" class="btn btn-primary">Save</button>
                         </div>
                     </form>
                 </div>
-
                 <!-- Skills Management -->
                 <div class="admin-form-section">
                     <div class="section-header">
                         <h3>Skills Management</h3>
-                        <a href="@Url.Action("CreateSkill","Admin")" class="btn btn-success btn-sm">
-                            <i class="fa fa-plus"></i> Add New Skill
-                        </a>
                     </div>
 
                     <div id="skillsList" class="skills-admin-list">
@@ -112,7 +118,7 @@
                                     <button type="submit" class="btn-icon btn-edit">
                                         <i class="fa fa-save"></i>
                                     </button>
-                                    <a href="@Url.Action("DeleteSkill","Admin", new { id = skill.Id })" class="btn-icon btn-delete">
+                                    <a href="@Url.Action("DeleteSkill", "Admin", new { id = skill.Id })" class="btn-icon btn-delete">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </div>
@@ -126,15 +132,18 @@
                             </form>
                         }
                     </div>
+
+                    <button type="button" id="addSkillBtn" class="btn btn-success btn-sm"
+                            onclick="initSkillsManagement()">
+                        <i class="fa fa-plus"></i> Add New Skill
+                    </button>
+
                 </div>
 
                 <!-- Education Management -->
                 <div class="admin-form-section">
                     <div class="section-header">
                         <h3>Education Management</h3>
-                        <a href="@Url.Action("CreateEducation","Admin")" class="btn btn-success btn-sm">
-                            <i class="fa fa-plus"></i> Add New Education
-                        </a>
                     </div>
 
                     <div id="educationList" class="timeline-admin-list">
@@ -146,7 +155,7 @@
                                     <button type="submit" class="btn-icon btn-edit">
                                         <i class="fa fa-save"></i>
                                     </button>
-                                    <a href="@Url.Action("DeleteEducation","Admin", new { id = edu.Id })" class="btn-icon btn-delete">
+                                    <a href="@Url.Action("DeleteEducation", "Admin", new { id = edu.Id })" class="btn-icon btn-delete">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </div>
@@ -173,15 +182,16 @@
                             </form>
                         }
                     </div>
+                    <button type="button" id="addEducationBtn" class="btn btn-success btn-sm" 
+                            onclick="initEducationManagement()">
+                        <i class="fa fa-plus"></i> Add New Education
+                    </button>
                 </div>
 
                 <!-- Experience Management -->
                 <div class="admin-form-section">
                     <div class="section-header">
                         <h3>Experience Management</h3>
-                        <a href="@Url.Action("CreateExperience","Admin")" class="btn btn-success btn-sm">
-                            <i class="fa fa-plus"></i> Add New Experience
-                        </a>
                     </div>
 
                     <div id="experienceList" class="timeline-admin-list">
@@ -193,7 +203,7 @@
                                     <button type="submit" class="btn-icon btn-edit">
                                         <i class="fa fa-save"></i>
                                     </button>
-                                    <a href="@Url.Action("DeleteExperience","Admin", new { id = exp.Id })" class="btn-icon btn-delete">
+                                    <a href="@Url.Action("DeleteExperience", "Admin", new { id = exp.Id })" class="btn-icon btn-delete">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </div>
@@ -220,6 +230,10 @@
                             </form>
                         }
                     </div>
+                    <button type="button" id="addExperienceBtn" class="btn btn-success btn-sm"
+                            onclick="initExperienceManagement()">
+                        <i class="fa fa-plus"></i> Add New Experience
+                    </button>
                 </div>
 
             </div>

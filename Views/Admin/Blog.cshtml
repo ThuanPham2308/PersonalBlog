@@ -1,0 +1,71 @@
+﻿@using PersonalBlog.Data
+@model IEnumerable<PersonalBlog.Data.Blog>
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<section class="admin-about section active" id="admin-blog">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h2>Manage Blogs</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="admin-content padd-15">
+                <div class="admin-form-section">
+                    <div class="section-header">
+                        <h3>Blog Management</h3>
+                    </div>
+
+                    <div id="blogList" class="blog-admin-list">
+                        @foreach (var blog in Model)
+                        {
+                            <form method="post" action="@Url.Action("UpdateBlog","Admin")" class="blog-admin-item padd-15">
+                                <input type="hidden" name="Id" value="@blog.Id" />
+
+                                <div class="blog-controls">
+                                    <button type="submit" class="btn-icon btn-edit">
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                    <a href="@Url.Action("DeleteBlog", "Admin", new { id = blog.Id })" class="btn-icon btn-delete">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+
+                                <div class="blog-info">
+                                    <div class="form-group">
+                                        <label>Title:</label>
+                                        <input type="text" name="Title" value="@blog.Title" placeholder="Blog Title" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tag:</label>
+                                        <input type="text" name="Tag" value="@blog.Tag" placeholder="Tags, comma-separated" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Summary:</label>
+                                        <textarea name="Summary" rows="2" placeholder="Blog Summary">@blog.Summary</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Content:</label>
+                                        <textarea name="Content" rows="4" placeholder="Blog Content">@blog.Content</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Publish Date:</label>
+                                        <input type="date" name="PublishDate" value="@(blog.PublishDate.HasValue? blog.PublishDate.Value.ToString("yyyy-MM-dd") : "")" />
+                                    </div>
+                                </div>
+                            </form>
+                        }
+                    </div>
+
+                    <button type="button" id="addBlogBtn" class="btn btn-success btn-sm" onclick="initBlogManagement()">
+                        <i class="fa fa-plus"></i> Add New Blog
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,72 @@
+﻿@using PersonalBlog.Data;
+@model IEnumerable<PersonalBlog.Data.Service>
+@{
+    ViewBag.Title = "Service";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- Admin Services Management Section -->
+<section class="admin-about section active" id="admin-about">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h2>Manage Services Information</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="admin-content padd-15">
+                <!-- Services Management -->
+                <div class="admin-form-section">
+                    <div class="section-header">
+                        <h3>Services Management</h3>
+                    </div>
+
+                    <div id="servicesList" class="services-admin-list">
+                        @foreach (var service in Model)
+                        {
+                            <form method="post" action="@Url.Action("UpdateService", "Admin")" class="service-admin-item padd-15">
+                                <input type="hidden" name="Id" value="@service.Id" />
+
+                                <div class="service-controls">
+                                    <button type="submit" class="btn-icon btn-edit">
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                    <a href="@Url.Action("DeleteService", "Admin", new { id = service.Id })" class="btn-icon btn-delete">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+
+                                <div class="service-info">
+                                    <div class="form-group">
+                                        <label for="ServiceName">Service Name:</label>
+                                        <input type="text" id="ServiceName" name="ServiceName" class="service-name"
+                                               value="@service.ServiceName" placeholder="Service Name" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="Description">Description:</label>
+                                        <textarea id="Description" name="Description" class="service-description" rows="2"
+                                              placeholder="Description">@service.Description</textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="Icon">Icon:</label>
+                                        <input type="text" id="Icon" name="Icon" class="service-icon"
+                                               value="@service.Icon" placeholder="Icon class (fa fa-code...)" />
+                                    </div>
+                                </div>
+                            </form>
+                        }
+                    </div>
+
+                    <button type="button" id="addServiceBtn" class="btn btn-success btn-sm"
+                            onclick="initServiceManagement()">
+                        <i class="fa fa-plus"></i> Add New Service
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

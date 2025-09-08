@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\views\\admin\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:views\\admin\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\views\\admin\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:views\\admin\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|c:\\users\\user\\documents\\api\\project\\personalblog\\data\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1516404B-EB57-4A2E-A17E-D5F2E74220B1}|PersonalBlog.csproj|solutionrelative:data\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AboutController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Controllers\\AboutController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AboutController.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Controllers\\AboutController.cs",
-              "RelativeToolTip": "Controllers\\AboutController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Blog.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\Blog.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Blog.cshtml",
+              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\Blog.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Blog.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-08T07:46:43.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-08T07:46:01.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Blog.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Data\\Blog.cs",
+              "RelativeDocumentMoniker": "Data\\Blog.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Data\\Blog.cs",
+              "RelativeToolTip": "Data\\Blog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T14:19:27.059Z",
+              "WhenOpened": "2025-09-08T07:42:03.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\wwwroot\\js\\script.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\script.js",
+              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\wwwroot\\js\\script.js",
+              "RelativeToolTip": "wwwroot\\js\\script.js",
+              "ViewState": "AgIAAMIBAAAAAAAAAAAkwNEBAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-08T07:35:58.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "About.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\About.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\About.cshtml",
-              "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Views\\Admin\\About.cshtml",
-              "RelativeToolTip": "Views\\Admin\\About.cshtml",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-21T14:02:59.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\API\\Project\\PersonalBlog\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCcAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAACwBAAAAAAAAAAAcwDcBAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T14:00:57.95Z",
               "EditorCaption": ""

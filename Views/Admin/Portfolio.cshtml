@@ -1,0 +1,71 @@
+﻿@using PersonalBlog.Data
+@model IEnumerable<PersonalBlog.Data.Portfolio>
+@{
+    ViewBag.Title = "Portfolio";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<section class="admin-about section active" id="admin-portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h2>Manage Portfolio</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="admin-content padd-15">
+                <div class="admin-form-section">
+                    <div class="section-header">
+                        <h3>Portfolio Management</h3>
+                    </div>
+
+                    <div id="portfolioList" class="portfolio-admin-list">
+                        @foreach (var item in Model)
+                        {
+                            <form method="post" action="@Url.Action("UpdatePortfolio","Admin")" class="portfolio-admin-item padd-15">
+                                <input type="hidden" name="Id" value="@item.Id" />
+
+                                <div class="portfolio-controls">
+                                    <button type="submit" class="btn-icon btn-edit">
+                                        <i class="fa fa-save"></i>
+                                    </button>
+                                    <a href="@Url.Action("DeletePortfolio", "Admin", new { id = item.Id })" class="btn-icon btn-delete">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+
+                                <div class="portfolio-info">
+                                    <div class="form-group">
+                                        <label>Title:</label>
+                                        <input type="text" name="Title" class="portfolio-title" value="@item.Title" placeholder="Project Title" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Description:</label>
+                                        <textarea name="Description" class="portfolio-description" rows="2" placeholder="Description">@item.Description</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Image URL:</label>
+                                        <input type="text" name="Image" class="portfolio-image" value="@item.Image" placeholder="Image URL" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Link:</label>
+                                        <input type="text" name="Link" class="portfolio-link" value="@item.Link" placeholder="Project Link" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Category:</label>
+                                        <input type="text" name="Category" class="portfolio-category" value="@item.Category" placeholder="Category" />
+                                    </div>
+                                </div>
+                            </form>
+                        }
+                    </div>
+
+                    <button type="button" id="addPortfolioBtn" class="btn btn-success btn-sm" onclick="initPortfolioManagement()">
+                        <i class="fa fa-plus"></i> Add New Portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

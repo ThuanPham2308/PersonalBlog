@@ -39,28 +39,33 @@
                     <ul class="nav">
                         <li>
                             <a href="@Url.Action("Index", "Admin")"
-                               class="@(ViewContext.RouteData.Values["controller"].ToString() == "Admin" ? "active" : "")">
+                               class="@(ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")">
                                 <i class="fa fa-home"></i> Home
                             </a>
                         </li>
 
                         <li>
                             <a href="@Url.Action("About", "Admin")"
-                               class="@(ViewContext.RouteData.Values["controller"].ToString() == "Admin" ? "active" : "")">
+                               class="@(ViewContext.RouteData.Values["action"].ToString() == "About" ? "active" : "")">
                                 <i class="fa fa-user"></i> About
                             </a>
                         </li>
-
+                        <li>
+                            <a href="@Url.Action("Service", "Admin")"
+                               class="@(ViewContext.RouteData.Values["action"].ToString() == "Service" ? "active" : "")">
+                                <i class="fa fa-list"></i> Service
+                            </a>
+                        </li>
                         <li>
                             <a href="@Url.Action("Portfolio", "Admin")"
-                               class="@(ViewContext.RouteData.Values["controller"].ToString() == "Admin" ? "active" : "")">
+                               class="@(ViewContext.RouteData.Values["action"].ToString() == "Portfolio" ? "active" : "")">
                                 <i class="fa fa-briefcase"></i> Portfolio
                             </a>
                         </li>
 
                         <li>
                             <a href="@Url.Action("Blog", "Admin")"
-                               class="@(ViewContext.RouteData.Values["controller"].ToString() == "Admin" ? "active" : "")">
+                               class="@(ViewContext.RouteData.Values["action"].ToString() == "Blog" ? "active" : "")">
                                 <i class="fa fa-pencil"></i> Blog
                             </a>
                         </li>
