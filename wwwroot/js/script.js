@@ -182,9 +182,9 @@ function initSkillsManagement() {
                     <i class="fa fa-trash"></i>
                 </a>
             </div>
-            <div class="skill-info">
+            <div class="row">
                 <input type="text" name="SkillName" class="skill-name" placeholder="Enter skill name" />
-                <div class="progress-container">
+                <div class="form-group padd-15">
                     <input type="range" name="Proficiency" min="0" max="100" value="0" />
                     <span class="proficiency-value">0%</span>
                 </div>
@@ -227,7 +227,7 @@ function initEducationManagement() {
         const form = document.createElement("form");
         form.method = "post";
         form.action = "/Admin/CreateEducation";
-        form.className = "timeline-admin-item padd-15";
+        form.className = "timeline-admin-item";
 
         form.innerHTML = `
             <div class="timeline-controls">
@@ -249,13 +249,17 @@ function initEducationManagement() {
                         <input type="number" name="EndYear" />
                     </div>
                 </div>
-                <div class="form-group padd-15">
-                    <label>Title:</label>
-                    <input type="text" name="Title" placeholder="Enter title" />
-                </div>
-                <div class="form-group padd-15">
-                    <label>Description:</label>
-                    <textarea name="Description" rows="3" placeholder="Enter description"></textarea>
+               <div class="row">
+                     <div class="form-group padd-15">
+                         <label>Title:</label>
+                         <input type="text" name="Title" placeholder="Enter title" />
+                     </div>
+               </div>
+               <div class="row">
+                    <div class="form-group padd-15">
+                         <label>Description:</label>
+                         <textarea name="Description" rows="3" placeholder="Enter description"></textarea>
+                     </div>
                 </div>
             </div>
         `;
@@ -280,7 +284,7 @@ function initExperienceManagement() {
         const form = document.createElement("form");
         form.method = "post";
         form.action = "/Admin/CreateExperience";
-        form.className = "timeline-admin-item padd-15";
+        form.className = "timeline-admin-item";
 
         form.innerHTML = `
             <div class="timeline-controls">
@@ -302,13 +306,17 @@ function initExperienceManagement() {
                         <input type="number" name="EndYear" />
                     </div>
                 </div>
-                <div class="form-group padd-15">
-                    <label>Title:</label>
-                    <input type="text" name="Title" placeholder="Enter job title" />
+                <div class="row">
+                    <div class="form-group padd-15">
+                         <label>Title:</label>
+                         <input type="text" name="Title" placeholder="Enter job title" />
+                     </div>
                 </div>
-                <div class="form-group padd-15">
-                    <label>Description:</label>
-                    <textarea name="Description" rows="3" placeholder="Enter job description"></textarea>
+                <div class="row">
+                    <div class="form-group padd-15">
+                        <label>Description:</label>
+                        <textarea name="Description" rows="3" placeholder="Enter job description"></textarea>
+                    </div>
                 </div>
             </div>
         `;
@@ -345,17 +353,22 @@ function initServiceManagement() {
                 </a>
             </div>
             <div class="service-info">
-                <div class="form-group">
-                    <label>Service Name:</label>
-                    <input type="text" name="ServiceName" placeholder="Enter service name" />
+               <div class="row">
+                    <div class="form-group">
+                         <label>Service Name:</label>
+                         <input type="text" name="ServiceName" placeholder="Enter service name" />
+                     </div>
+
+                     <div class="form-group">
+                         <label>Icon:</label>
+                         <input type="text" name="Icon" placeholder="Icon class (fa fa-code...)" />
+                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Description:</label>
-                    <textarea name="Description" rows="2" placeholder="Enter description"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Icon:</label>
-                    <input type="text" name="Icon" placeholder="Icon class (fa fa-code...)" />
+                <div class="row">
+                     <div class="form-group">
+                         <label>Description:</label>
+                         <textarea name="Description" rows="2" placeholder="Enter description"></textarea>
+                     </div>
                 </div>
             </div>
         `;
@@ -392,25 +405,30 @@ function initPortfolioManagement() {
                 </a>
             </div>
             <div class="portfolio-info">
-                <div class="form-group">
-                    <label>Title:</label>
-                    <input type="text" name="Title" placeholder="Project Title" />
+                <div class="row">
+                    <div class="form-group">
+                         <label>Title:</label>
+                         <input type="text" name="Title" placeholder="Project Title" />
+                     </div>
+
+                     <div class="form-group">
+                         <label>Image URL:</label>
+                         <input type="text" name="Image" placeholder="Image URL" />
+                     </div>
+                     <div class="form-group">
+                         <label>Link:</label>
+                         <input type="text" name="Link" placeholder="Project Link" />
+                     </div>
+                     <div class="form-group">
+                         <label>Category:</label>
+                         <input type="text" name="Category" placeholder="Category" />
+                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Description:</label>
-                    <textarea name="Description" rows="2" placeholder="Description"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Image URL:</label>
-                    <input type="text" name="Image" placeholder="Image URL" />
-                </div>
-                <div class="form-group">
-                    <label>Link:</label>
-                    <input type="text" name="Link" placeholder="Project Link" />
-                </div>
-                <div class="form-group">
-                    <label>Category:</label>
-                    <input type="text" name="Category" placeholder="Category" />
+                <div class="row">
+                  <div class="form-group">
+                     <label>Description:</label>
+                     <textarea name="Description" rows="2" placeholder="Description"></textarea>
+                 </div>
                 </div>
             </div>
         `;
@@ -447,25 +465,29 @@ function initBlogManagement() {
                 </a>
             </div>
             <div class="blog-info">
-                <div class="form-group">
-                    <label>Title:</label>
-                    <input type="text" name="Title" placeholder="Blog Title" />
+                <div class="row">
+                    <div class="form-group">
+                        <label>Title:</label>
+                        <input type="text" name="Title" placeholder="Blog Title" />
+                    </div>
+                    <div class="form-group">
+                        <label>Tag:</label>
+                        <input type="text" name="Tag" placeholder="Tags, comma-separated" />
+                    </div>
+                    <div class="form-group">
+                        <label>Summary:</label>
+                        <textarea name="Summary" rows="2" placeholder="Blog Summary"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Publish Date:</label>
+                        <input type="date" name="PublishDate" />
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Tag:</label>
-                    <input type="text" name="Tag" placeholder="Tags, comma-separated" />
-                </div>
-                <div class="form-group">
-                    <label>Summary:</label>
-                    <textarea name="Summary" rows="2" placeholder="Blog Summary"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Content:</label>
-                    <textarea name="Content" rows="4" placeholder="Blog Content"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Publish Date:</label>
-                    <input type="date" name="PublishDate" />
+                <div class="row">
+                    <div class="form-group">
+                        <label>Content:</label>
+                        <textarea name="Content" rows="4" placeholder="Blog Content"></textarea>
+                    </div>
                 </div>
             </div>
         `;
